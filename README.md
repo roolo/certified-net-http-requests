@@ -25,6 +25,10 @@ Just require certified-net-http-requests gem in your code
     require 'rubygems'
     require 'certified-net-http-requests'
 
+You should also first and time to time update your certification authority bundle
+
+    $ update-ca-bundle
+
 ## Contributing
 
 1. [Fork it](http://help.github.com/fork-a-repo/)
