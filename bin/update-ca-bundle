@@ -1,0 +1,6 @@
+#!env ruby
+# Downloads current ca bundle from http://curl.haxx.se/
+require 'rubygems'
+require 'certified-net-http-requests/ca-bundle'
+
+CABundle::update
