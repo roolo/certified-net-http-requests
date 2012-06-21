@@ -29,6 +29,19 @@ You should also first and time to time update your certification authority bundl
 
     $ update-ca-bundle
 
+## Example code
+
+    require 'net/https'
+    require 'rubygems'
+
+    require 'certified-net-http-requests' # Try to comment this line after first runnning and run this code again
+
+    http = Net::HTTP.new('encrypted.google.com', 443)          # Create a connection
+    http.use_ssl = true
+    header, body = http.get('/')
+
+    puts header
+
 ## Contributing
 
 1. [Fork it](http://help.github.com/fork-a-repo/)
