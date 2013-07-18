@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Certified-net-http-requests : Gem which make net/http requests using certificate bundle from cURL page" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Certified-net-http-requests</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/roolo/certified-net-http-requests">View on GitHub</a>
+
+          <h1 id="project_title">Certified-net-http-requests</h1>
+          <h2 id="project_tagline">Gem which make net/http requests using certificate bundle from cURL page</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/roolo/certified-net-http-requests/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/roolo/certified-net-http-requests/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="certified-nethttp-requests" class="anchor" href="#certified-nethttp-requests"><span class="octicon octicon-link"></span></a>Certified net/http requests</h2>
+
+<p>Gem for dealing with <code>SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed</code>
+( <a href="http://martinottenwaelter.fr/2010/12/ruby19-and-the-ssl-error/">http://martinottenwaelter.fr/2010/12/ruby19-and-the-ssl-error/</a> ) error. This project is highly inspired by
+<a href="https://github.com/stevegraham/certified">certified</a> project by Stevie Graham</p>
+
+<p><a href="http://badge.fury.io/rb/certified-net-http-requests"><img src="https://badge.fury.io/rb/certified-net-http-requests.png" alt="Gem Version"></a></p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<ol>
+<li>
+<p>Add this line to your application's Gemfile:</p>
+
+<p>gem 'certified-net-http-requests'</p>
+</li>
+<li>
+<p>Bundle project:</p>
+
+<p>$ bundle</p>
+</li>
+</ol><p>Or install it yourself as:</p>
+
+<pre><code>$ gem install certified-net-http-requests
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Just require certified-net-http-requests gem in your code</p>
+
+<pre><code>require 'rubygems'
+require 'certified-net-http-requests'
+</code></pre>
+
+<p>You should also first and time to time update your certification authority bundle</p>
+
+<pre><code>$ update-ca-bundle
+</code></pre>
+
+<h2>
+<a name="example-code" class="anchor" href="#example-code"><span class="octicon octicon-link"></span></a>Example code</h2>
+
+<pre><code>require 'net/https'
+require 'rubygems'
+
+require 'certified-net-http-requests' # Try to comment this line after first runnning and run this code again
+
+http = Net::HTTP.new('encrypted.google.com', 443)          # Create a connection
+http.use_ssl = true
+header, body = http.get('/')
+
+puts header
+</code></pre>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li><a href="http://help.github.com/fork-a-repo/">Fork it</a></li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li><a href="http://help.github.com/send-pull-requests/">Create new Pull Request</a></li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Certified-net-http-requests maintained by <a href="https://github.com/roolo">roolo</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-39110385-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
