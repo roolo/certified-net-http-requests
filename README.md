@@ -4,6 +4,8 @@ Gem for dealing with `SSL_connect returned=1 errno=0 state=SSLv3 read server cer
 ( http://martinottenwaelter.fr/2010/12/ruby19-and-the-ssl-error/ ) error. This project is highly inspired by
 [certified](https://github.com/stevegraham/certified) project by Stevie Graham
 
+[![Gem Version](https://badge.fury.io/rb/certified-net-http-requests.png)](http://badge.fury.io/rb/certified-net-http-requests)
+
 ## Installation
 
 1. Add this line to your application's Gemfile:
