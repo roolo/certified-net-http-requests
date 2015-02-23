@@ -2,8 +2,8 @@
 require File.expand_path('../lib/certified-net-http-requests/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = %W("Mailo Svetel")
-  gem.email         = %W(mailo@rooland.cz)
+  gem.authors       = ['Mailo Svetel']
+  gem.email         = ['development@rooland.cz']
   gem.description   = %q{Gem for dealing with `SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed` error}
   gem.summary       = %q{Make net/http verifying ssl certificates against Certificate Authorities from cURL CA bundle }
   gem.homepage      = "http://github.com/roolo/certified-net-http-requests"
