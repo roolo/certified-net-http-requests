@@ -1,5 +1,7 @@
 ## Certified net/http requests
 
+[![Join the chat at https://gitter.im/roolo/certified-net-http-requests](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/roolo/certified-net-http-requests?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Gem for dealing with `SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed`
 ( http://martinottenwaelter.fr/2010/12/ruby19-and-the-ssl-error/ ) error. This project is highly inspired by
 [certified](https://github.com/stevegraham/certified) project by Stevie Graham
